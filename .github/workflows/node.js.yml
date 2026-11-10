@@ -27,3 +27,5 @@ jobs:
     - run: npm  --prefix function_library ci
     - run: npm  --prefix function_library run build --if-present
     - run: npm  --prefix function_library test
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v2.3.8
