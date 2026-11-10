@@ -29,3 +29,5 @@ jobs:
     - run: npm  --prefix function_library test
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2.3.8
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
