@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage && coveralls < coverage/lcov.info"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage && coveralls < coverage/lcov.info"
   },
   "author": "",
   "license": "MIT",
