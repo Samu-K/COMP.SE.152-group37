@@ -28,7 +28,7 @@ jobs:
     - run: npm  --prefix function_library run build --if-present
     - run: npm  --prefix function_library test
       if: always()
-    - name: Publish Test Results
+    - name: Test results
       uses: dorny/test-reporter@v1
       if: always()
       with:
