@@ -27,6 +27,14 @@ jobs:
     - run: npm  --prefix function_library ci
     - run: npm  --prefix function_library run build --if-present
     - run: npm  --prefix function_library test
+      if: always()
+    - name: Publish Test Results
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: Jest Test Results
+        path: function_library/junit.xml
+        reporter: jest-junit
     - name: Coveralls
       uses: coverallsapp/github-action@v2
       with:
